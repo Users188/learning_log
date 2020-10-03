@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+{% extends "learning_logs/base.html" %}
 <head>
     <meta charset="UTF-8">
-    <title>Edit</title>
+    {% block title %}
+    <title>Edit:{{topic}} entry</title>
+    {% endblock title%}
 </head>
 <body>
-{% extends "learning_logs/base.html" %}
+
 {% block content %}
   <p><a href="{% url 'learning_logs:topic' topic.id%}">{{topic}}</a> </p>
   <p>Edit:entry</p>
